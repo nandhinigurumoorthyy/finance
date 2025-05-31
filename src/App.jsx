@@ -28,12 +28,6 @@ const[results,setResults]=useState(null)
     setResults({
       rate,gram, interestRate,goldValue,monthlyInterest,totalAfterDeduction
     });
-
-    setData({
-          goldRatePerGram: "",
-    goldGM: "",
-    interest: "",
-    })
   };
 
  return (
@@ -53,7 +47,7 @@ const[results,setResults]=useState(null)
                 name="goldRatePerGram"
                 id="goldRatePerGram"
                 value={data.goldRatePerGram}
-                placeholder="4000"
+                placeholder="Gold or silver price (e.g: 4000)"
                 className="flex-1 p-1 border-2 border-gray-300 rounded-lg"
               />
               <span>Rs</span>
@@ -70,7 +64,7 @@ const[results,setResults]=useState(null)
                 name="goldGM"
                 id="goldGM"
                 value={data.goldGM}
-                placeholder="3.4"
+                placeholder="Gold or silver weight (e.g: 3.4)"
                 className="flex-1 p-1 border-2 border-gray-300 rounded-lg"
                 onChange={(e) => setData({ ...data, goldGM: e.target.value })}
               />
@@ -88,7 +82,7 @@ const[results,setResults]=useState(null)
                 name="interest"
                 id="interest"
                 value={data.interest}
-                placeholder="2.5"
+                placeholder="interest (e.g: 2.5)"
                 className="flex-1 p-1 border-2 border-gray-300 rounded-lg"
                 onChange={(e) => setData({ ...data, interest: e.target.value })}
               />
